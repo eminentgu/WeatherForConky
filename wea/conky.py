@@ -1,4 +1,5 @@
 #coding=utf-8
+#MADE BY ERIC 2017/8/29
 import urllib
 import re
 import os
@@ -50,13 +51,28 @@ try :
     high = getWeather(m,'<span>(.*?)</span>/<i>')
     low = getWeather(m,'</span>/<i>(.*?)</i>')
     condition = getWeather(m,'class="wea">(.*?)</p>')
-    print condition[0]
+    conditionA = condition[0]
+    print conditionA
     print '          ' + high[0] +'～' + low[0]
+
     t = condition[0] +'n'
     img = getWeather(t,'转(.*?)n')
-    if img == []:
-        changeIcon(condition[0])
-    else :
-        changeIcon(img[0])
+    imga = getWeather(t,'间(.*?)n')
+    if imga == []:
+        if img == []:
+            changeIcon(condition[0])
+            #print condition[0]
+        else :
+            if t.find('转') == t.rfind('转'):
+                changeIcon(img[0])
+                #print img[0]
+            else :
+                d = img[0]+'n'
+                c = getWeather(d,'转(.*?)n')
+                changeIcon(c[0])
+                #print c[0]
+    else:
+        changeIcon(imga[0])
+        #print imga[0]
 except :
     print 'ERROR!'
