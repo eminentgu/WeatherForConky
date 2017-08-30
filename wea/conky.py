@@ -1,5 +1,4 @@
 #coding=utf-8
-#MADE BY ERIC 2017/8/29
 import urllib
 import re
 import os
@@ -55,7 +54,7 @@ try :
     print conditionA
     print '          ' + high[0] +'～' + low[0]
 
-    t = condition[0] +'n'
+    t = condition[1] +'n'
     img = getWeather(t,'转(.*?)n')
     imga = getWeather(t,'间(.*?)n')
     if imga == []:
