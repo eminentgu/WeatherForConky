@@ -51,7 +51,7 @@ try :
     high = getWeather(m,'<span>(.*?)</span>/<i>')
     low = getWeather(m,'</span>/<i>(.*?)</i>')
     condition = getWeather(m,'class="wea">(.*?)</p>')
-    conditionA = condition[0]
+    conditionA = condition[1]
     print conditionA
     print '          ' + high[0] +'～' + low[0]
 
