@@ -60,7 +60,7 @@ try :
     imga = getWeather(t,'间(.*?)n')
     if imga == []:
         if img == []:
-            changeIcon(condition[0])
+            changeIcon(condition[1])
             #print condition[0]
         else :
             if t.find('转') == t.rfind('转'):
