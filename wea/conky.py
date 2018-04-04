@@ -16,35 +16,35 @@ def changeIcon(icon) :
     if icon == '晴' :
         dt=list(time.localtime())
         if (dt[3] >= 19) or (dt[3] <= 6) :
-            os.system('rm -rf /wea/显示/1.png')  
-            os.system('cp /wea/图片/Moon.png /wea/显示/1.png')
+            os.system('rm -rf ~/WeatherForConky/wea/显示/1.png')  
+            os.system('cp ~/WeatherForConky/wea/图片/Moon.png ~/WeatherForConky/wea/显示/1.png')
         else :
-            os.system('rm -rf /wea/显示/1.png')  
-            os.system('cp /wea/图片/Sun.png /wea/显示/1.png')
+            os.system('rm -rf ~/WeatherForConky/wea/显示/1.png')  
+            os.system('cp ~/WeatherForConky/wea/图片/Sun.png ~/WeatherForConky/wea/显示/1.png')
     if icon == '多云' :
         dt=list(time.localtime())
         if (dt[3] >= 19) or (dt[3] <= 6) :
-            os.system('rm -rf /wea/显示/1.png')  
-            os.system('cp /wea/图片/Cloudy-Nighttime.png /wea/显示/1.png')
+            os.system('rm -rf ~/WeatherForConky/wea/显示/1.png')  
+            os.system('cp ~/WeatherForConky/wea/图片/Cloudy-Nighttime.png ~/WeatherForConky/wea/显示/1.png')
         else :
-            os.system('rm -rf /wea/显示/1.png')  
-            os.system('cp /wea/图片/Cloudy-Daytime.png /wea/显示/1.png')
+            os.system('rm -rf ~/WeatherForConky/wea/显示/1.png')  
+            os.system('cp ~/WeatherForConky/wea/图片/Cloudy-Daytime.png ~/WeatherForConky/wea/显示/1.png')
     if icon == '阴' :
         dt=list(time.localtime())
-        os.system('rm -rf /wea/显示/1.png')  
-        os.system('cp /wea/图片/Overcast-Sky.png /wea/显示/1.png')
+        os.system('rm -rf ~/WeatherForConky/wea/显示/1.png')  
+        os.system('cp ~/WeatherForConky/wea/图片/Overcast-Sky.png ~/WeatherForConky/wea/显示/1.png')
     if icon == '雷阵雨' :
         dt=list(time.localtime())
-        os.system('rm -rf /wea/显示/1.png')  
-        os.system('cp /wea/图片/Thunder-Shower.png /wea/显示/1.png')
+        os.system('rm -rf ~/WeatherForConky/wea/显示/1.png')  
+        os.system('cp ~/WeatherForConky/wea/图片/Thunder-Shower.png ~/WeatherForConky/wea/显示/1.png')
     if (icon == '小雨') or (icon == '中雨') or (icon == '大雨') or (icon == '暴雨') or (icon == '阵雨') :
         dt=list(time.localtime())
-        os.system('rm -rf /wea/显示/1.png')  
-        os.system('cp /wea/图片/Drizzle.png /wea/显示/1.png')
+        os.system('rm -rf ~/WeatherForConky/wea/显示/1.png')  
+        os.system('cp ~/WeatherForConky/wea/图片/Drizzle.png ~/WeatherForConky/wea/显示/1.png')
     if (icon == '小雪') or (icon == '中雪') or (icon == '大雪') or (icon == '暴雪') or (icon == '阵雪') :
         dt=list(time.localtime())
-        os.system('rm -rf /wea/显示/1.png')  
-        os.system('cp /wea/图片/Snow.png /wea/显示/1.png')
+        os.system('rm -rf ~/WeatherForConky/wea/显示/1.png')  
+        os.system('cp ~/WeatherForConky/wea/图片/Snow.png ~/WeatherForConky/wea/显示/1.png')
 try :
     m =getHtml('http://www.weather.com.cn/weather/101190402.shtml')
     high = getWeather(m,'<span>(.*?)</span>/<i>')
