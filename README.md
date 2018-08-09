@@ -1,6 +1,6 @@
 # WeatherForConky
 A weather report which can be run on the desktop,get data from CHINA WEATHER.
-####################################### WHAT IS  IT？######################################################
+####################################### WHAT THIS IS？######################################################
   It is a small tool to get weather report from CHINA WEATHER and show it on the upper right of the desktop.
   这是一个小的工具从中国天气得到天气报告，并在桌面的右上方显示它。
 ####################################### HOW TO USE IT?####################################################
